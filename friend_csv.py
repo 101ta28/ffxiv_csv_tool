@@ -2,6 +2,7 @@ import requests
 import sys
 import csv
 import re
+import os
 from bs4 import BeautifulSoup
 
 
@@ -53,6 +54,9 @@ def get_friend_list(url):
 		soup = BeautifulSoup(res.text, "html.parser")
 		f_window = soup.find_all(class_="ldst__window")
 
+
+	if os.path.exists("friend_list.csv"):
+		os.remove("friend_list.csv")
 
 	for name, world, fc in zip(g_friend_list, g_world_list, g_fc_list):
 		with open("friend_list.csv", "a") as f:
