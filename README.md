@@ -1,6 +1,6 @@
 # FFXIV_CSV_TOOL
 
-FF14の公式プレイヤーズサイトの「[The Lodestone](https://jp.finalfantasyxiv.com/lodestone/)」のフレンドリストやFCメンバー一覧をCSVに書き出すプログラムです。
+FF14公式プレイヤーズサイトの「[The Lodestone](https://jp.finalfantasyxiv.com/lodestone/)」のフレンドリストやFCメンバーリストをCSVに書き出すプログラムです。
 
 ## 必要パッケージ
 
@@ -26,13 +26,16 @@ $ pip install -r requirements.txt
 ```bash
 $ git clone https://github.com/101ta28/ffxiv_csv_tool.git
 $ cd ffxiv_csv_tool
+# フレンドリストを取得するプログラム
 $ python friend_csv.py
+# FCメンバーリストを取得するプログラム
+$ python fc_member_csv.py
 ```
 
 ## ファイルについて
 CSVファイルはプログラムの配置場所に保存されます。
 
-フレンドリストのCSVファイル名は friend_list.csv
+CSVファイル名は friend_list.csv
 
 CSVフォーマットは以下の通りです。
 
@@ -43,9 +46,9 @@ FCに所属していない場合は、「FC not joined」が書き込まれま�
 
 ---
 
-FCメンバー一覧のCSVフォーマットは以下の通りです。
+FCメンバーリストのCSVフォーマットは以下の通りです。
 
-フレンドリストのCSVファイル名は [FC名].csv
+CSVファイル名は [FC名].csv
 
 (例: 「github」というFCのCSVファイル名は github.csv)
 
